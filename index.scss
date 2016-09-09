@@ -1,0 +1,295 @@
+@import 'https://fonts.googleapis.com/css?family=Poiret+One|Source+Code+Pro';
+
+$font1: 'Poiret One', cursive;
+$font2: 'Source Code Pro', monospace;
+
+
+
+@mixin bp-medium {
+	@media only screen and (min-width: 700px) {
+		@content;
+	}
+}
+
+@mixin bp-ipad {
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+		@content;
+	}
+}
+
+@mixin bp-large {
+	@media only screen and (min-width: 1366px) {
+		@content;
+	}
+}
+
+
+@mixin bp-xlarge {
+	@media only screen and (min-width: 1600px) {
+		@content;
+	}
+}
+
+@mixin bp-xxlarge {
+	@media only screen and (min-width: 1920px) {
+		@content;
+	}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.ui-widget
+{
+  background: rgba(255, 255, 255, 1);
+  color: black;
+  font-family: $font2;
+}
+
+.ui-datepicker{
+  margin-left: -1rem;
+  margin-top:1rem;
+  @include bp-medium{
+		margin-left: 0rem;
+	}
+}
+.ui-widget-header {
+  background: rgba(255, 255, 255, 1);
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+	background-color: black;
+  color: white;
+  font-size: 100%;
+  font-family: $font1;
+}
+
+
+
+.wrapper {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include bp-xxlarge{
+		width: 80%;
+	}
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0rem;
+  margin: auto;
+  max-width: 95%;
+  @include bp-medium{
+		width: 100%;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+	}
+  @include bp-ipad{
+		width: 100%
+	}
+  @include bp-large{
+		width: 80%;
+	}
+   @include bp-xlarge{
+		width: 70%;
+	}
+
+}
+
+#toggle-content {
+  background: transparent;
+  border: transparent;
+  border-radius: 2.5rem;
+  width: 4.5rem;
+  height: 4rem;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+    border:2px solid white;
+  }
+  @include bp-medium {
+		order:-1;
+	}
+}
+
+.fa-info-circle {
+  color: white;
+  animation: pulse 1s linear 2s infinite;
+}
+
+
+#heading {
+  text-shadow:0 1px 1px black;
+  flex-basis: 80%;
+  text-align: center;
+  margin: 1rem;
+  font-size: 2.1rem;
+    @include bp-ipad {
+     font-size: 2.3rem;
+  }
+  @include bp-large {
+		 flex-basis: 70%;
+	}
+}
+
+
+#datepicker {
+  text-align: center;
+  padding: .5rem;
+  max-width: 9rem;
+  font-size: 1rem;
+  color: white;
+  background: transparent;
+  border-radius: .2rem;
+  border: .15rem solid white;
+  font-family: $font1;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  cursor: pointer;
+  margin: 0;
+  @include bp-ipad {
+		 max-width: 12rem;
+    padding: .5rem;
+    font-size: .9rem;
+	}
+}
+
+#toggle-hd {
+  background: transparent;
+  border: transparent;
+  color: white;
+  font-family: $font1;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 .5rem;
+  @include bp-ipad {
+	  margin: 0 1rem;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+  &.clicked {
+    background: white;
+    color: black;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 2.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: .1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  margin: auto;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  width: 90%;
+   @include bp-medium{
+		width: 95%;
+	}
+  @include bp-large{
+		width: 80%;
+	}
+  @include bp-xlarge{
+		width: 70%;
+	}
+}
+
+#content_title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#content_info {
+  margin: auto;
+  max-width: 90%;
+  text-align: center;
+  line-height: 1.6rem;
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  font-family: $font1;
+}
+
+#copyright {
+  text-align: center;
+  margin-top: 4rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+
+#nasa-link {
+  margin-top: 1rem;
+  align-self: center;
+  text-align: center;
+  img {
+     max-width: 50%;
+  }
+}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+::--moz-input-placeholder {
+   color: white;
+}
+
+
+//Animation
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+
+@include keyframes(pulse) {
+  0% {  transform: scale(1); }
+  50% {  transform: scale(.9); }
+  100% {  transform: scale(1); }
+}
+
