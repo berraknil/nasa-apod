@@ -79,13 +79,6 @@ header {
 
 .fa-info-circle {
   color: white;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  -webkit-animation: pulse 2s ease-out 2s infinite;
-   -moz-animation: pulse 2s ease-out 2s infinite;
-    -ms-animation: pulse 2s ease-out 2s infinite;
-     -o-animation: pulse 2s ease-out 2s infinite;
-        animation: pulse 2s ease-out 2s infinite;
   }
 
 #heading {
@@ -193,40 +186,3 @@ header {
 
 ::--moz-input-placeholder {
   color: white; }
-
-@-webkit-keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
-@-moz-keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
-@-ms-keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
-@-o-keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
-@keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
-
