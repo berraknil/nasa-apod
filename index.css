@@ -79,7 +79,7 @@ header {
 
 .fa-info-circle {
   color: white;
-  animation: pulse 2s cubic-bezier(0.4, 0, 1, 1) 2s infinite; }
+  animation: pulse 2s ease-out 2s infinite; }
 
 #heading {
   text-shadow: 0 1px 1px black;
