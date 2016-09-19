@@ -79,6 +79,8 @@ header {
 
 .fa-info-circle {
   color: white;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   -webkit-animation: pulse 2s ease-out 2s infinite;
    -moz-animation: pulse 2s ease-out 2s infinite;
     -ms-animation: pulse 2s ease-out 2s infinite;
