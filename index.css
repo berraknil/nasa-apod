@@ -187,28 +187,6 @@ header {
 ::--moz-input-placeholder {
   color: white; }
 
-
-@-moz-keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
-@-ms-keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
-@-o-keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
 @keyframes pulse {
   0% {
     transform: scale(1); }
